@@ -1,1 +1,1 @@
-console.log("Hello from Deno!");
+console.log("Hello JS!");

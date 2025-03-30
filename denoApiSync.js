@@ -1,3 +1,5 @@
+// with Deno
+
 const path = "./helloSync.txt";
 const inputData = "Bye Sync!";
 
