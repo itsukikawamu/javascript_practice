@@ -27,10 +27,6 @@ const judge = (person)=>{
     }
 }
 
-const p1 = new Person("Mike", 19);
-p1.introduce();
-judge(p1);
-
 module.exports = {
     Person,
     judge,

@@ -1,6 +1,9 @@
 const Btn = document.getElementById("Btn");
 const max = 5;
 const min = 1
+
+window.alert("can you see me?");
+
 let rand = ()=> {
     let num = Math.random() * (max - min) + min;
     return Math.round(num * 100) / 100;
