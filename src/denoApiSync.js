@@ -1,6 +1,6 @@
 // with Deno
 
-const path = "./helloSync.txt";
+const path = "../text/helloSync.txt";
 const inputData = "Bye Sync!";
 
 console.log("[1]");

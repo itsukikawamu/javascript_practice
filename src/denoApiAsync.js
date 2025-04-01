@@ -1,6 +1,6 @@
 // with Deno
 
-const path = "./helloAsync.txt";
+const path = "../text/helloAsync.txt";
 const inputData = "hello Async"
 
 console.log("[1]");
