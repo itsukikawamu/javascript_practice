@@ -1,0 +1,2 @@
+succeeded.
+data: hello promise chain.

@@ -22,10 +22,12 @@ fs.writeFile("../text/cbh1.txt", content, ()=>{
                             return;
                         }
                         content = `succeeded.\ndata: ${data}`;
-                        
+
                     });
                 });
             });
         });
     });
-})
+    console.log("finished.");
+});
+console.log("writing files...");

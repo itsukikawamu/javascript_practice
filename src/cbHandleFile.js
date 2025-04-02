@@ -12,3 +12,4 @@ function writeResult(err){
 }
 const fs = require('fs');
 fs.writeFile(pass, hungry_message, writeResult);
+console.log("finishesd");
