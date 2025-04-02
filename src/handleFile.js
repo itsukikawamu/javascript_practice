@@ -1,6 +1,5 @@
-const pass = '../text/hungry.txt';
-const content = "i am hungry.";
-
+const hungry_message = "i am hungry.";
+const pass = "../text/hungry.txt";
 function writeResult(err){
     console.log("result")
     if (err){
@@ -12,13 +11,34 @@ function writeResult(err){
     }
 }
 const fs = require('fs');
-fs.writeFile(`${pass}-1`, content, writeResult);
+fs.writeFile(pass, hungry_message, writeResult);
 
-fs.readFile(`${pass}-2`, 'utf8', (err, data)=>{
-    if (err){
-        console.log("failed.", err);
-        return;
-    }
-    console.log("succeeded.");
-    console.log("data:", data);
-});
+let content = "Initial message.";
+fs.writeFile("../text/test1.txt", content, ()=>{
+    fs.readFile("../text/test1.txt", 'utf8', (err, data)=>{
+        if (err){
+            console.log("failed.", err);
+            return;
+        }
+        content = `succeeded.\ndata: ${data}`;
+        fs.writeFile("../text/test2.txt", content, ()=>{
+            fs.readFile("../text/test2.txt", 'utf8', (err, data)=>{
+                if (err){
+                    console.log("failed.", err);
+                    return;
+                }
+                content = `succeeded.\ndata: ${data}`;
+                fs.writeFile("../text/test3.txt", content, ()=>{
+                    fs.readFile("../text/test3.txt", 'utf8', (err, data)=>{
+                        if (err){
+                            console.log("failed.", err);
+                            return;
+                        }
+                        content = `succeeded.\ndata: ${data}`;
+                        
+                    });
+                });
+            });
+        });
+    });
+})
